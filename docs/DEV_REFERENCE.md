@@ -59,6 +59,37 @@ git commit
 git push
 ```
 
+## .gitignore (Ignoring Files)
+
+Use a `.gitignore` file to tell Git which files should **not** be tracked in a repository.
+
+Example `.gitignore` entry:
+
+```text
+.DS_Store
+```
+
+Common files often ignored in projects:
+
+```text
+.DS_Store
+__pycache__/
+.env
+node_modules/
+```
+
+If a file was already committed before adding it to `.gitignore`, remove it from Git tracking while keeping the local file:
+
+```bash
+git rm --cached filename
+```
+
+Then commit the change:
+
+```bash
+git commit -m "Remove file and update .gitignore"
+```
+
 ---
 
 # Python Quick Reference
